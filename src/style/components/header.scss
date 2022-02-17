@@ -1,0 +1,27 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  font-size: $font-size-m;
+  background-color: $color-primary;
+}
+.nav {
+  display: flex;
+  height: 40px;
+  overflow-x: auto;
+  z-index: 10;
+  @include mq("tablet") {
+    height: 45px;
+    overflow: none;
+  }
+  &__container {
+    display: flex;
+  }
+  &__logo {
+    display: flex;
+    flex-direction: row;
+  }
+}

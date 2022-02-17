@@ -1,0 +1,13 @@
+//CONFIG
+@import "./config/mixin.scss";
+//UTILS
+@import "./utils/variable.scss";
+
+//COMPONENTS
+@import "./components/header.scss";
+@import "./components/footer.scss";
+@import "./components/navlink.scss";
+
+body {
+  margin: 0;
+}

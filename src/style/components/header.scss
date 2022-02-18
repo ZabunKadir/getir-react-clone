@@ -1,27 +1,112 @@
 .header {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   width: 100%;
   height: auto;
   font-size: $font-size-m;
   background-color: $color-primary;
+  overflow: hidden;
+  @include mq("tablet") {
+    font-size: $font-size-m;
+    position: sticky;
+    top: 0px;
+    z-index: 20;
+  }
 }
 .nav {
   display: flex;
+  width: 100%;
   height: 40px;
-  overflow-x: auto;
   z-index: 10;
+  padding-left: 6px;
+  padding-right: 6px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  //Hide scrollbar for IE, Edge and Firefox
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  //Hide scrollbar for chrome,safari,opera
+  &::-webkit-scrollbar {
+    display: none;
+  }
   @include mq("tablet") {
     height: 45px;
-    overflow: none;
+    overflow-x: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
   }
   &__container {
     display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    @include mq("tablet") {
+      justify-content: space-between;
+      padding-left: 16px;
+      padding-right: 16px;
+    }
   }
   &__logo {
     display: flex;
+    width: 100%;
     flex-direction: row;
+    justify-content: space-between;
+    @include mq("tablet") {
+      justify-content: flex-start;
+      width: auto;
+    }
   }
+}
+.mobile-header {
+  display: flex;
+  width: 100%;
+  background-color: $color-primaryHover;
+  padding-left: 16px;
+  padding-right: 16px;
+  height: 64px;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  &__block {
+    display: flex;
+  }
+  &__image {
+    height: 22px;
+  }
+}
+.user-actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 36px;
+  @include mq("tablet") {
+    justify-content: flex-end;
+    width: 100%;
+  }
+  &__block {
+    display: flex;
+  }
+  &__button {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    align-items: center;
+    &-block {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 36px;
+    }
+  }
+}
+.button__icon {
+  display: flex;
+  font-size: $font-size-m;
+  color: white;
 }

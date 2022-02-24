@@ -1160,6 +1160,13 @@
   dependencies:
     "@fortawesome/fontawesome-common-types" "^0.3.0"
 
+"@fortawesome/free-brands-svg-icons@^6.0.0":
+  "integrity" "sha512-BIhsy2YeGuk8+KQwpqmyayQDWo1lvGMHsMIE+z5ApPRgV7T+zGhmNzYVoBT4IrJMC6ep5WpGrxoHX+IvNxHnkw=="
+  "resolved" "https://registry.npmjs.org/@fortawesome/free-brands-svg-icons/-/free-brands-svg-icons-6.0.0.tgz"
+  "version" "6.0.0"
+  dependencies:
+    "@fortawesome/fontawesome-common-types" "^0.3.0"
+
 "@fortawesome/free-regular-svg-icons@^6.0.0":
   "integrity" "sha512-lYK6oyQL8HwZUAVWGqF7TGuwQBVfphNBVTdvPSD3h4gmQfGazm/xcwg3kmtcRycu3y6QspOC7hPXSoJbVqSYCw=="
   "resolved" "https://registry.npmjs.org/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-6.0.0.tgz"
@@ -2933,7 +2940,7 @@
   "resolved" "https://registry.npmjs.org/cjs-module-lexer/-/cjs-module-lexer-1.2.2.tgz"
   "version" "1.2.2"
 
-"classnames@^2.2.6":
+"classnames@^2.2.3", "classnames@^2.2.6":
   "integrity" "sha512-OlQdbZ7gLfGarSqxesMesDa5uz7KFbID8Kpq/SxIoNGDqY8lSYs0D+hhtBXhcdB3rcbXArFr7vlHheLk1voeNA=="
   "resolved" "https://registry.npmjs.org/classnames/-/classnames-2.3.1.tgz"
   "version" "2.3.1"
@@ -7197,7 +7204,7 @@
     "strip-ansi" "^6.0.1"
     "text-table" "^0.2.0"
 
-"react-dom@*", "react-dom@^17.0.2", "react-dom@>=16.8", "react-dom@>=16.8.0":
+"react-dom@*", "react-dom@^0.14.7 || ^15.0.0-0 || ^16.0.0 || ^17.0.0", "react-dom@^17.0.2", "react-dom@>=16.8", "react-dom@>=16.8.0":
   "integrity" "sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA=="
   "resolved" "https://registry.npmjs.org/react-dom/-/react-dom-17.0.2.tgz"
   "version" "17.0.2"
@@ -7205,6 +7212,13 @@
     "loose-envify" "^1.1.0"
     "object-assign" "^4.1.1"
     "scheduler" "^0.20.2"
+
+"react-dropdown@^1.9.2":
+  "integrity" "sha512-g4eufErTi5P5T5bGK+VmLl//qvAHy79jm6KKx8G2Tl3mG90bpigb+Aw85P+C2JUdAnIIQdv8kP/oHN314GvAfw=="
+  "resolved" "https://registry.npmjs.org/react-dropdown/-/react-dropdown-1.9.2.tgz"
+  "version" "1.9.2"
+  dependencies:
+    "classnames" "^2.2.3"
 
 "react-error-overlay@^6.0.10":
   "integrity" "sha512-mKR90fX7Pm5seCOfz8q9F+66VCc1PGsWSBxKbITjfKVQHMNF2zudxHnMdJiB1fRCb+XsbQV9sO9DCkgsMQgBIA=="
@@ -7303,7 +7317,7 @@
   optionalDependencies:
     "fsevents" "^2.3.2"
 
-"react@*", "react@^17.0.2", "react@>= 16", "react@>=16.8", "react@>=16.8.0", "react@>=16.x", "react@17.0.2":
+"react@*", "react@^0.14.7 || ^15.0.0-0 || ^16.0.0 || ^17.0.0", "react@^17.0.2", "react@>= 16", "react@>=16.8", "react@>=16.8.0", "react@>=16.x", "react@17.0.2":
   "integrity" "sha512-gnhPt75i/dq/z3/6q/0asP78D0u592D5L1pd7M8P+dck6Fu/jJeL6iVVK23fptSUZj8Vjf++7wXA8UNclGQcbA=="
   "resolved" "https://registry.npmjs.org/react/-/react-17.0.2.tgz"
   "version" "17.0.2"

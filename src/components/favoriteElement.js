@@ -13,7 +13,7 @@ export default function FavoriteElement({
   return (
     <article className="favorite-element">
       <div className="favorite-element__block">
-        <button className="favorite-element__button">
+        <div className="favorite-element__button">
           <Link to={"/favorite/" + link} className="favorite-element__link">
             <figure className="favorite-element__figure">
               <img
@@ -28,15 +28,15 @@ export default function FavoriteElement({
               <FontAwesomeIcon className="font--bold" icon={faPlus} />
             </button>
           </div>
-        </button>
+        </div>
       </div>
       <div className="favorite-element__cost font--bold">
         {!discount ? (
           "₺" + cost
         ) : (
           <div className="favorite-element__discount">
-            <div className="discount__previous">₺{cost[0]}</div>
-            <div className="discount__now">₺{cost[1]}</div>
+            <div className="discount--previous">₺{cost[0]}</div>
+            <div>₺{cost[1]}</div>
           </div>
         )}
       </div>

@@ -1,38 +1,23 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-const DownloadCard = ({ language, size }) => {
+const DownloadCard = ({ language, size, title, content }) => {
   const [screenSize, setScreenSize] = useState(400);
-  const [titleByLanguage, setTitleByLanguage] = useState("Getir'i indirin!");
-  const [contextByLanguage, setContextByLanguage] = useState(
-    "İstediğiniz ürünleri dakikalar içinde kapınıza getirelim."
-  );
-  const languageControl = (language) => {
-    if (language === "tr-TR") {
-      setTitleByLanguage("Getir'i indirin!");
-      setContextByLanguage(
-        "İstediğiniz ürünleri dakikalar içinde kapınıza getirelim."
-      );
-    } else if (language === "en-EN") {
-      setTitleByLanguage("Download Getir!");
-      setContextByLanguage(
-        "Let us deliver your order to your door in minutes."
-      );
-    } else {
-      setTitleByLanguage("Download Getir!");
-      setContextByLanguage(
-        "Let us deliver your order to your door in minutes."
-      );
-    }
-  };
+  const [titleByLanguage, setTitleByLanguage] = useState(title);
+  const [contentByLanguage, setContentByLanguage] = useState(content);
+
   useEffect(() => {
-    languageControl(language);
     setScreenSize(size);
   }, [language, size]);
+
   return (
     <section className="download-card__section">
       <div className="download-card__block">
         <h2 className="download-card__title font--bold">{titleByLanguage}</h2>
-        <span className="download-card__context">{contextByLanguage}</span>
+        <span className="download-card__context">
+          {language === "tr-TR"
+            ? contentByLanguage?.contentTR
+            : contentByLanguage?.contentEN}
+        </span>
         <div className="download-card__buttons">
           <div className="download-card__item">
             <Link to="" className="download-card__button">

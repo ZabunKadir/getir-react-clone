@@ -1,27 +1,8 @@
 import NavLink from "./navlink";
-import { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGlobe, faUser, faUserPlus } from "@fortawesome/free-solid-svg-icons";
-const Header = () => {
-  const [screenSize, getDimension] = useState({
-    dynamicWidth: window.innerWidth,
-    dynamicHeight: window.innerHeight,
-  });
-  const setDimension = () => {
-    getDimension({
-      dynamicWidth: window.innerWidth,
-      dynamicHeight: window.innerHeight,
-    });
-  };
 
-  useEffect(() => {
-    window.addEventListener("resize", setDimension);
-
-    return () => {
-      window.removeEventListener("resize", setDimension);
-    };
-  }, [screenSize]);
-
+const Header = ({ language, screenSize }) => {
   return (
     <header className="header">
       <nav className="nav">
@@ -54,17 +35,27 @@ const Header = () => {
               imageUrl={"./images/getir-locals-logo.svg"}
             />
           </div>
-          {screenSize.dynamicWidth > 767 ? (
+          {screenSize > 767 ? (
             <div className="user-actions">
               <div className="user-actions__block">
                 <div className="user-actions__button-block">
                   <button className="user-actions__button">
                     <FontAwesomeIcon className="button__icon" icon={faGlobe} />
+                    {screenSize >= 1024 && (
+                      <span className="button__text">
+                        {language === "tr-TR" ? "Türkçe (TR)" : "English (EN)"}
+                      </span>
+                    )}
                   </button>
                 </div>
                 <div className="user-actions__button-block">
                   <button className="user-actions__button">
                     <FontAwesomeIcon className="button__icon" icon={faUser} />
+                    {screenSize >= 1024 && (
+                      <span className="button__text">
+                        {language === "tr-TR" ? "Giriş yap" : "Login"}
+                      </span>
+                    )}
                   </button>
                 </div>
                 <div className="user-actions__button-block">
@@ -73,6 +64,11 @@ const Header = () => {
                       className="button__icon"
                       icon={faUserPlus}
                     />
+                    {screenSize >= 1024 && (
+                      <span className="button__text">
+                        {language === "tr-TR" ? "Kayıt Ol" : "Register"}
+                      </span>
+                    )}
                   </button>
                 </div>
               </div>
@@ -82,7 +78,7 @@ const Header = () => {
           )}
         </div>
       </nav>
-      {screenSize.dynamicWidth < 768 ? (
+      {screenSize < 768 ? (
         <div className="mobile-header">
           <div className="mobile-header__block">
             <img

@@ -113,13 +113,11 @@
   }
 }
 .discount {
-  &__previous {
+  &--previous {
     text-decoration: line-through;
     font-weight: 100;
     color: #697488;
     margin-right: 10px;
-  }
-  &__now {
   }
 }
 .counter__button {
@@ -129,9 +127,9 @@
   background: none;
   justify-content: center;
   border: none;
-  text-align: center;
   align-items: center;
-  border-radius: 8px;
+  padding: 0;
+  cursor: pointer;
   font-size: $font-size-s;
   color: $color-primaryHover;
 }

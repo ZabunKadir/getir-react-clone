@@ -1,24 +1,30 @@
 .cards {
   display: flex;
-  padding-left: 16px;
-  padding-right: 16px;
+  width: 90%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
   background-color: #f5f5f5;
-
   @include mq("tablet") {
-    height: 401px;
-    max-width: 1232px;
   }
   @include mq("laptop") {
     max-width: 1232px;
+    width: 94%;
   }
   &__block {
     display: flex;
     width: 100%;
     height: 100%;
     margin-top: 32px;
+    justify-content: center;
+    align-items: center;
   }
   &__items {
     display: flex;
+    width: 100%;
     justify-content: center;
     align-items: center;
     height: 100%;
@@ -31,7 +37,9 @@
   }
   &__item {
     display: flex;
+    width: 90%;
     height: 100%;
+    align-items: center;
     justify-content: center;
     flex-direction: column;
     background-color: #fff;
@@ -41,26 +49,29 @@
     @include mq("tablet") {
       box-shadow: rgb(93 62 188 / 4%) 0px 6px 24px;
       border-radius: 8px;
+      width: 100%;
+      padding: 0;
     }
   }
   &__figure {
     display: flex;
+    width: 100%;
     justify-content: center;
     margin: 32px 16px;
   }
-  &__img {
-  }
   &__title {
     display: flex;
-    width: 100%;
+    width: 90%;
     justify-content: center;
+    height: auto;
     margin-top: 24px;
     color: $color-primaryHover;
     text-align: center;
+    word-wrap: break-word;
   }
   &__content {
     display: flex;
-    width: 100%;
+    width: 90%;
     height: auto;
     justify-content: center;
     flex-wrap: wrap;
@@ -69,5 +80,22 @@
     color: #697488;
     font-size: 15px;
     margin-bottom: 32px;
+  }
+}
+.cards-item {
+  &__img {
+    display: flex;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+    justify-content: center;
+    align-items: center;
   }
 }

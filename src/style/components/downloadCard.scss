@@ -1,20 +1,25 @@
 .download-card {
   &__section {
     display: flex;
-    width: 100%;
     height: auto;
+    margin: 24px auto;
+    position: relative;
+    overflow: hidden;
     background-color: $color-primaryHover;
     @include mq("tablet") {
       padding-left: 16px;
       padding-right: 16px;
       border-radius: 8px;
+      width: 90%;
       background-image: url("../../../public/images/doodle.png");
     }
     @include mq("laptop") {
+      width: 97%;
+      padding: 0;
+    }
+    @include mq("large") {
       width: 100%;
       max-width: 1232px;
-      padding: 0;
-      margin-top: 24px;
     }
   }
   &__block {

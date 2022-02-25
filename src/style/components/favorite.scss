@@ -1,11 +1,14 @@
 .favorite {
   &__section {
     display: flex;
-    width: 100%;
+    width: 92%;
     height: auto;
     padding-top: 12px;
+    margin: 0 auto;
     @include mq("tablet") {
       background-color: #f5f5f5;
+      padding-left: 32px;
+      padding-right: 32px;
     }
     @include mq("laptop") {
       justify-content: center;

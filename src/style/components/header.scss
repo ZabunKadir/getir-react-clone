@@ -17,7 +17,7 @@
 }
 .nav {
   display: flex;
-  width: 100%;
+  width: 95%;
   height: 40px;
   z-index: 10;
   padding-left: 6px;
@@ -84,21 +84,26 @@
 }
 .user-actions {
   display: flex;
+  width: 100%;
+  height: 100%;
   justify-content: center;
   align-items: center;
   height: 36px;
   @include mq("tablet") {
     justify-content: flex-end;
-    width: 100%;
   }
   &__block {
     display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: flex-end;
   }
   &__button {
     display: flex;
     width: 100%;
     height: 100%;
-    background: transparent;
+    background: none;
+    flex-direction: row;
     border: none;
     align-items: center;
     &-block {
@@ -107,11 +112,29 @@
       justify-content: center;
       width: 40px;
       height: 36px;
+      @include mq("laptop") {
+        width: auto;
+        height: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
     }
   }
 }
-.button__icon {
-  display: flex;
-  font-size: $font-size-m;
-  color: white;
+.button {
+  &__icon {
+    display: flex;
+    font-size: $font-size-m;
+    color: rgb(219, 219, 255);
+  }
+  &__text {
+    display: flex;
+    margin-left: 10px;
+    width: 100%;
+    height: 100%;
+    color: rgb(219, 219, 255);
+    align-items: center;
+    font-family: $font-general;
+    font-size: $font-size-m;
+  }
 }

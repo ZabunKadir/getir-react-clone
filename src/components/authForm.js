@@ -1,37 +1,19 @@
 import Input from "./input";
-import { useState, useEffect } from "react";
+
+import { useState } from "react";
 
 import ReactFlagsSelect from "react-flags-select";
-const AutForm = ({ language }) => {
+
+const AutForm = ({ language, title, buttonText }) => {
   const [formData, setFormData] = useState({ phone: "" });
   const [isPhoneFocus, setIsPhoneFocus] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState("TR");
-  const [titleByLanguage, setTitleByLanguage] = useState(
-    "Giriş yap veya kayıt ol"
-  );
-  const [buttonByLanguage, setButtonByLanguage] = useState(
-    "Telefon numarası ile devam et"
-  );
-  const languageControl = (language) => {
-    if (language === "tr-TR") {
-      setTitleByLanguage("Giriş yap veya kayıt ol");
-      setButtonByLanguage("Telefon numarası ile devam et");
-      setSelectedCountry("TR");
-    } else if (language === "en-EN") {
-      setTitleByLanguage("Login or register");
-      setButtonByLanguage("Continue with phone number");
-    } else {
-      setTitleByLanguage("Login or register");
-      setButtonByLanguage("Continue with phone number");
-      setSelectedCountry("TR");
-    }
-  };
+  const [titleByLanguage, setTitleByLanguage] = useState(title);
+  const [buttonByLanguage, setButtonByLanguage] = useState(buttonText);
+
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  useEffect(() => {
-    languageControl(language);
-  }, [language]);
 
   return (
     <section className="section">
